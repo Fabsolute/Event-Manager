@@ -2,7 +2,7 @@
 Library that provides ways to use DI for PHP developers.
 
 ## Install
-Install the library like this `composer require fabs/di` 
+Install the library like this `composer require fabs/event` 
 
 ## Quick Start
 ```php
