@@ -1,0 +1,24 @@
+{
+  "name": "fabs/event",
+  "type": "library",
+  "description": "Event Manager for PHP",
+  "keywords": [
+    "php",
+    "event",
+    "event manager",
+    "messenger"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ahmet Turk",
+      "email": "ahmetturk93@gmail.com",
+      "homepage": "https://github.com/fabsolute"
+    }
+  ],
+  "autoload": {
+    "psr-0": {
+      "Fabs\\Event": "src"
+    }
+  }
+}
