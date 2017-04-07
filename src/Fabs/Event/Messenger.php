@@ -8,6 +8,7 @@
  */
 
 namespace Fabs\Event;
+
 use Closure;
 use Exception;
 use SplPriorityQueue;
@@ -26,7 +27,7 @@ class Messenger
      */
     public function addListener($channel, $handler, $priority = 100)
     {
-        if (is_object($handler)) {
+        if (is_object($handler) || is_callable($handler)) {
             if (is_string($channel)) {
                 if (!array_key_exists($channel, $this->events)) {
                     $this->events[$channel] = new SplPriorityQueue();
@@ -37,7 +38,7 @@ class Messenger
                 throw new Exception('channel must be string');
             }
         } else {
-            throw new Exception('handler must be callable');
+            throw new Exception('handler must be callable or object');
         }
         return $this;
     }
